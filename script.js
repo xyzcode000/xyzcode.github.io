@@ -1,4 +1,4 @@
- const video = document.getElementById("heroVideo");
+const video = document.getElementById("heroVideo");
 
 let velocity = 0;
 let playing = false;
@@ -62,18 +62,23 @@ function animate() {
 
 animate();
 
-// -------------------------
-// SCROLL MOMENTUM
-// -------------------------
+
+
+let lastScrollY = window.scrollY;
 
 window.addEventListener(
-    "wheel",
-    (e) => {
+    "scroll",
+    () => {
 
-        lastScrollTime = performance.now();
+        const now = performance.now();
+        const currentY = window.scrollY;
+        const delta = Math.abs(currentY - lastScrollY);
+
+        lastScrollY = currentY;
+        lastScrollTime = now;
 
         // Add momentum based on scroll amount
-        velocity += Math.abs(e.deltaY) * 0.0035;
+        velocity += delta * 0.0035;
 
         // Prevent huge jumps
         velocity = Math.min(velocity, 2.5);

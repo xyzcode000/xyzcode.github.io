@@ -23,6 +23,12 @@ body{
 
 }
 
+a{
+
+    color:inherit;
+
+}
+
 a:focus-visible{
 
     outline:2px solid #8ad8ff;
@@ -199,9 +205,9 @@ nav a:hover{
 
 .hero-content{
 
-    width:700px;
+    width:min(1100px,90%);
 
-    margin-left:8%;
+    margin:0 auto;
 
 }
 
@@ -223,7 +229,7 @@ nav a:hover{
 
 .hero h1{
 
-    font-size:clamp(72px,9vw,150px);
+    font-size:clamp(64px,8vw,128px);
 
     line-height:.88;
 
@@ -346,8 +352,8 @@ transform:translateY(0);
 
 .section-tag{
 
-    letter-spacing:6px;
-    font-size:18px;
+    letter-spacing:5px;
+    font-size:15px;
     color:#c8c8c8;
     margin-bottom:20px;
 
@@ -355,7 +361,7 @@ transform:translateY(0);
 
 .panel h2{
 
-    font-size:clamp(44px,7vw,110px);
+    font-size:clamp(40px,5.2vw,84px);
     margin-bottom:35px;
     line-height:.95;
     text-shadow:0 4px 30px rgba(0,0,0,.45);
@@ -368,7 +374,7 @@ transform:translateY(0);
 
 .about-text{
 
-    font-size:24px;
+    font-size:22px;
     line-height:1.9;
     color:#ececec;
     max-width:900px;
@@ -385,7 +391,7 @@ transform:translateY(0);
 
 .about-text.lead{
 
-    font-size:clamp(20px,2.4vw,28px);
+    font-size:clamp(20px,2.1vw,26px);
     line-height:1.6;
     max-width:1100px;
 
@@ -431,7 +437,7 @@ transform:translateY(0);
 
 .project-card h3{
 
-    font-size:32px;
+    font-size:30px;
     margin-bottom:8px;
 
 }
@@ -447,6 +453,7 @@ transform:translateY(0);
 
 .project-card p{
 
+    font-size:17px;
     color:#dcdcdc;
     line-height:1.75;
     margin-bottom:16px;
@@ -484,26 +491,9 @@ transform:translateY(0);
 .project-links{
 
     display:flex;
-    gap:22px;
-    margin-top:22px;
-
-}
-
-.project-links a{
-
-    color:#8ad8ff;
-    font-weight:600;
-    text-decoration:none;
-    padding-bottom:2px;
-    border-bottom:1px solid rgba(138,216,255,.45);
-    transition:.3s;
-
-}
-
-.project-links a:hover{
-
-    color:#fff;
-    border-bottom-color:#fff;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:24px;
 
 }
 
@@ -549,7 +539,21 @@ transform:translateY(0);
 
 }
 
-.btn:hover{
+a.btn,
+a.btn:visited{
+
+    color:#fff;
+
+}
+
+.btn-sm{
+
+    padding:10px 22px;
+    font-size:15px;
+
+}
+
+a.btn:hover{
 
     background:#fff;
     color:#000;
@@ -568,7 +572,7 @@ transform:translateY(0);
     align-items:center;
     gap:22px;
     margin-top:55px;
-    font-size:clamp(20px,3vw,34px);
+    font-size:clamp(18px,2.4vw,30px);
     font-weight:600;
     line-height:1.6;
     letter-spacing:.5px;
@@ -600,7 +604,7 @@ transform:translateY(0);
     position:relative;
     padding-left:48px;
     margin-bottom:18px;
-    font-size:clamp(20px,2.4vw,28px);
+    font-size:clamp(19px,2.1vw,26px);
     line-height:1.5;
     color:#ececec;
     text-shadow:0 2px 14px rgba(0,0,0,.55);
@@ -705,14 +709,14 @@ transform:translateY(0);
 .c-label{
 
     flex:0 0 120px;
-    font-size:22px;
+    font-size:20px;
     font-weight:600;
 
 }
 
 .c-value{
 
-    font-size:19px;
+    font-size:18px;
     color:#d0d0d0;
     overflow-wrap:anywhere;
 
@@ -754,14 +758,6 @@ gap:14px;
 nav a{
 
 font-size:13px;
-
-}
-
-.hero-content{
-
-margin:0 24px;
-
-width:auto;
 
 }
 
